@@ -23,7 +23,10 @@ connectDB();
 
 // ── Middleware ─────────────────────────────────────────────────
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173', // Vite default port
+  origin: [
+    'http://localhost:5173',                    // local dev
+    process.env.CLIENT_URL,                     // set this on Render
+  ].filter(Boolean),
   credentials: true,
 }));
 app.use(express.json());
