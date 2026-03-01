@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import BASE_URL from "../utils/getBaseUrl";
 
 const Login = ({ onClose, onLogin, openRegister }) => {
   const [form, setForm] = useState({ username: "", password: "" });
@@ -15,7 +14,7 @@ const Login = ({ onClose, onLogin, openRegister }) => {
     setLoading(true);
 
     try {
-      const res = await fetch(`${BASE_URL}/api/auth/login`, {
+      const res = await fetch("/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -29,6 +28,7 @@ const Login = ({ onClose, onLogin, openRegister }) => {
       if (!res.ok) {
         setError(data.error || "Login failed. Please check your credentials.");
       } else {
+        // Backend returns { user: { id, username, gender, age }, token }
         localStorage.setItem("token", data.token);
         onLogin(data.user);
         onClose();
@@ -55,13 +55,26 @@ const Login = ({ onClose, onLogin, openRegister }) => {
 
           <form className="login-form" onSubmit={handleSubmit}>
             <label className="input-label">
-              <input type="text" name="username" placeholder="Username"
-                value={form.username} onChange={handleChange}
-                required autoComplete="username" />
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                value={form.username}
+                onChange={handleChange}
+                required
+                autoComplete="username"
+              />
             </label>
+
             <label className="input-label">
-              <input type="password" name="password" placeholder="Password"
-                value={form.password} onChange={handleChange} required />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={form.password}
+                onChange={handleChange}
+                required
+              />
             </label>
 
             {error && (
@@ -71,8 +84,12 @@ const Login = ({ onClose, onLogin, openRegister }) => {
               </p>
             )}
 
-            <button type="submit" className="btn-primary login-btn"
-              disabled={loading} style={{ opacity: loading ? 0.7 : 1 }}>
+            <button
+              type="submit"
+              className="btn-primary login-btn"
+              disabled={loading}
+              style={{ opacity: loading ? 0.7 : 1 }}
+            >
               {loading ? "Signing in…" : "Sign In →"}
             </button>
           </form>
