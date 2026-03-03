@@ -3,11 +3,11 @@ import { api } from "../utils/api";
 
 // ─── Constants ────────────────────────────────────────────────
 const PETS = [
-  { id: "fish", name: "Tiny Fish", emoji: "🐟", cost: 7, desc: "A calm little companion.", color: "#e8f0fe", accent: "#7b61ff", food: "fish flakes 🌊", stages: ["🥚","🐟","🐠"] },
+  { id: "fish", name: "Tiny Fish", emoji: "🐟", cost: 7, desc: "A calm little companion.", color: "#e8f0fe", accent: "#7b61ff", food: "fish flakes 🌊", stages: ["🐟","🐠", "🐋"] },
   { id: "chick", name: "Baby Chick", emoji: "🐣", cost: 7, desc: "A fluffy chick that chirps with joy.", color: "#fef3e2", accent: "#e08c3a", food: "grain seeds 🌾", stages: ["🥚","🐣","🐔"] },
-  { id: "lizard", name: "Gecko", emoji: "🦎", cost: 10, desc: "A quirky gecko with big eyes.", color: "#e9f7ef", accent: "#4caf80", food: "tiny insects 🦗", stages: ["🥚","🦎","🐊"] },
-  { id: "bunny", name: "Mini Bunny", emoji: "🐰", cost: 10, desc: "A soft bunny that loves check-ins.", color: "#f4d7d3", accent: "#c58f89", food: "carrots 🥕", stages: ["🥚","🐰","🐇"] },
-  { id: "cat", name: "Kitten", emoji: "🐱", cost: 14, desc: "An independent but loving cat.", color: "#f8efed", accent: "#b86f68", food: "cat treats 🎀", stages: ["🥚","🐱","🐈"] },
+  { id: "lizard", name: "Gecko", emoji: "🦎", cost: 10, desc: "A quirky gecko with big eyes.", color: "#e9f7ef", accent: "#4caf80", food: "tiny insects 🦗", stages: ["🦎","🐊", "🐉"] },
+  { id: "bunny", name: "Mini Bunny", emoji: "🐰", cost: 10, desc: "A soft bunny that loves check-ins.", color: "#f4d7d3", accent: "#c58f89", food: "carrots 🥕", stages: ["🐭","🐰","🐇"] },
+  { id: "cat", name: "Kitten", emoji: "🐱", cost: 14, desc: "An independent but loving cat.", color: "#f8efed", accent: "#b86f68", food: "cat treats 🎀", stages: ["🐱","😽","🐈"] },
 ];
 
 const DAILY_ACTIVITIES = [
