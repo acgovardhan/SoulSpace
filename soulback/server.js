@@ -14,6 +14,7 @@ const moodRoutes       = require('./routes/mood');
 const gardenRoutes     = require('./routes/garden');
 const questionRoutes   = require('./routes/questions');
 const chatbotRoutes    = require('./routes/chatbot');
+const reviewRoutes = require('./routes/reviews');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -25,7 +26,7 @@ connectDB();
 app.use(cors({
   origin: [
     'http://localhost:5173',                    // local dev
-    process.env.CLIENT_URL,                     // set this on Render
+    process.env.CLIENT_URL,                     
   ].filter(Boolean),
   credentials: true,
 }));
@@ -38,6 +39,7 @@ app.use('/api/mood',         moodRoutes);
 app.use('/api/garden',       gardenRoutes);
 app.use('/api/questions',    questionRoutes);
 app.use('/api/chatbot',      chatbotRoutes);
+app.use('/api/reviews', reviewRoutes);
 
 // ── Protected: get current user ────────────────────────────────
 app.get('/api/me', authMiddleware, async (req, res) => {
