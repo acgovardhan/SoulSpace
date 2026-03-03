@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 import React, { useState } from "react";
 import Dashboard from "./components/Dashboard";
 import Home from "./components/Home";
