@@ -1,21 +1,17 @@
 import React, { useState } from "react";
 
-const CONTACT_EMAIL = "soulspace@tkmce.ac.in";
-const CONTACT_PHONE = "96XXXXXXXX";
+const CONTACT_EMAIL = "230993@tkmce.ac.in";
+const CONTACT_PHONE = "Available soon..";
 
 const FAQS = [
   {
     q: "Is my data confidential?",
-    a: "Yes. In a production system, data would be stored securely and accessed only by authorized professionals."
+    a: "Yes, your data is stored securely in MongoDB Atlas Cloud DataBase."
   },
   {
     q: "What should I do in a mental health emergency?",
     a: "If you are in immediate danger, contact local emergency services or use the Emergency Call option for 24/7 support."
   },
-  {
-    q: "Are sessions free or paid?",
-    a: "SoulSpace offers a mix of free self-help resources and paid professional services."
-  }
 ];
 
 export default function ContactUs({ onClose }) {
