@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 // server.js
 require('dotenv').config();
 const express = require('express');
