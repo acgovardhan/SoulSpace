@@ -208,9 +208,10 @@ SoulSpace was designed and built as a collaborative student project at **TKM Col
 
 | Name | Role |
 |------|------|
-| Sahala Salam | Frontend — Auth, Tests & Mental Health Care |
-| Amrah K S | Frontend — Mood Tracker, ChatBot & Reviews |
-| Aarya Tejaswini J | Frontend — Home Shell, Soul Garden & Therapist Finder |
+| Sahala Salam | Frontend — Tests & Mental Health Care |
+| Amrah K S | Frontend — Mood Tracker, ChatBot |
+| Aarya Tejaswini J | Frontend — Home Shell, Soul Garden |
+| Malavika M | Therapist Finder, Reviews, Auth
 | A C Govardhan | Full Stack / Backend Engineering |
 
 ---
